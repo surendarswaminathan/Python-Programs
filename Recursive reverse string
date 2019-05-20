@@ -1,0 +1,12 @@
+words=["how","are","you"]
+a=[]
+t=0
+def reverseword(word1=[]):
+
+    if len(word1)==1:
+        print "length of word is one"
+        return word1[0]
+    else:
+        return word1.pop()+" "+reverseword(word1)
+
+reverseword(words)
