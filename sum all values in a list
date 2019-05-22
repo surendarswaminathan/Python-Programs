@@ -1,0 +1,3 @@
+summing all values in a list
+g=list(rang(1,3)
+sum(g) = output 3
