@@ -1,0 +1,31 @@
+https://thepythonguru.com/python-builtin-functions/reduce/
+reduce() function accepts a function and a sequence and returns a single value calculated as follows:
+
+1. Initially, the function is called with the first two items from the sequence and the result is returned.
+2 . The function is then called again with the result obtained in step 1 and the next value in the sequence. 
+This process keeps repeating until there are items in the sequence.
+
+
+def do_sum(x1,x2):
+   return x1+x2
+
+mylist=[1,2,3,4]
+
+print reduce(do_sum,mylist)
+
+
+
+def do_sum(x1, x2): 
+    return x1 + x2
+
+def my_reduce(func, seq):
+    first = seq[0]
+    
+    for i in seq[1:]:
+        
+        first = func(first, i)
+        
+        
+    return first
+
+print(my_reduce(do_sum, [1, 2, 3, 4]))
